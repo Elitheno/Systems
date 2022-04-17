@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_product_products",
+  "info": {
+    "displayName": "Product",
+    "icon": "bread-slice"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Price": {
+      "type": "float"
+    },
+    "Quanity": {
+      "type": "integer"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

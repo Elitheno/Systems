@@ -1,10 +1,13 @@
+import React from 'react';
 import '../styles/globals.css';
-import Header from '../components/header/header.jsx';
-import Footer from '../components/footer/footer.jsx';
+import {ApolloProvider} from '@apollo/client';
+import client from '../lib/apollo.js';
 
-function MyApp({Component, pageProps}) {
-	return <Component {...pageProps} />;
-}
+const MyApp = ({Component, pageProps}) => (
+	<ApolloProvider client={client}>
+		<Component {...pageProps} />
+	</ApolloProvider>
+);
 
 export default MyApp;
 

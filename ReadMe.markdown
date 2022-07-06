@@ -6,6 +6,8 @@ Backend uses PostgreSQL.
 
 All config & typographic changes are to be made solely within the `global.css` file.
 
+![Website Screenshot](./indexpage.png)
+
 ## Development
 
 `git clone https://github.com/jxnosila/elith.systems.git`

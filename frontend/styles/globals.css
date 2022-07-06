@@ -3,10 +3,27 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    background-color: #f0f0f0;
+  }
 	h1 {
 		@apply text-2xl;
 	}
 	h2 {
 		@apply text-xl;
 	}
+  h3 {
+    @apply text-lg font-bold;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    font-family: Helvetica;
+  }
 }
+

@@ -12,11 +12,16 @@
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.0",
+    "axios": "^0.27.2",
+    "js-cookie": "^3.0.1",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-hook-form": "^7.29.0",
-    "react-icons": "^4.3.1"
+    "react-hook-form": "^7.33.1",
+    "react-html-parser": "^2.0.2",
+    "react-icons": "^4.3.1",
+    "react-image-lightbox": "^5.1.4",
+    "react-slick": "^0.29.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.2",
@@ -31,6 +36,7 @@
     "precss": "^4.0.0",
     "prettier": "^2.6.2",
     "prettier-config-xo": "^2.0.0",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.23",
+    "xo": "^0.50.0"
   }
 }

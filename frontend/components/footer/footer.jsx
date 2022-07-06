@@ -3,16 +3,17 @@ import styles from './footer.module.css';
 
 const Footer = () => (
 	<footer className={styles.footer}>
-		<a
-			href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-			target='_blank'
-			rel='noopener noreferrer'
-		>
-			Powered by{' '}
-			<span className={styles.logo}>
-				<Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-			</span>
-		</a>
+		<div className='mx-2'>
+      Crafted with ♡ by Elith, in Next.JS
+		</div>
+		<div className='mx-2'>
+			<a
+				href='https://github.com/Elitheno'
+				target='_blank'
+				rel='noopenener noreferrer'>
+				<Image src='/ico/mother.png' width={48} height={48}/>{' '}
+			</a>
+		</div>
 	</footer>
 );
 

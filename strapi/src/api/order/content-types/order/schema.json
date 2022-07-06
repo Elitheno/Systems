@@ -4,26 +4,25 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "Order"
+    "displayName": "Order",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Timestamp": {
+    "name": {
+      "type": "string"
+    },
+    "order_date": {
       "type": "datetime"
     },
-    "Confirmation": {
+    "email": {
       "type": "email"
     },
-    "Total": {
-      "type": "float"
-    },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product"
+    "instructions": {
+      "type": "richtext"
     }
   }
 }

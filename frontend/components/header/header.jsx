@@ -1,19 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Link from 'next/link';
 import {RiArrowDownSFill, RiShoppingCart2Line as CartIcon} from 'react-icons/ri';
+import {logout} from '../../lib/auth.js';
+import AppContext from '../../context/app-context.js';
 import styles from './header.module.css';
 
 const Header = () => {
 	const [expand, toggleExpand] = useState(false);
+	const {user, setUser} = useContext(AppContext);
 	const rotateButtonStyle = {
 		transform: expand ? 'rotate(180deg)' : '',
 		transition: 'transform 150ms ease', // Smooth transition
 	};
 
 	return (
-		<header className='flex flex-col p-2 space-between'>
-    	<nav className='flex-row mx-2'>
-				<nav className='flex-start'>
+		<header className='flex flex-col justify-center p-2 h-24 space-between'>
+    	<nav className='flex-row mx-2 m-auto'>
+				<nav className='flex-start m-auto'>
 					<a href='/' className='text-2xl font-bold'>
 						{' '}
             elith.systems{' '}
@@ -26,6 +29,30 @@ const Header = () => {
 					>
 						<RiArrowDownSFill />
 					</button>
+					{user ? (
+						<h5>{user.username}</h5>
+					) : (
+						<Link href='/s'>
+							<a className='nav-link'> Sign up</a>
+						</Link>
+					)}
+					{user ? (
+						<Link href='/'>
+							<a
+								className='nav-link'
+								onClick={() => {
+									logout();
+									setUser(null);
+								}}
+							>
+                  Logout
+							</a>
+						</Link>
+					) : (
+						<Link href='/l'>
+							<a className='nav-link'>Sign in</a>
+						</Link>
+					)}
 				</nav>
 			</nav>
 			{!expand ? (

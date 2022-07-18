@@ -7,7 +7,7 @@ const StoreList = ({products}) => {
 			key={index}
 			name={item.attributes.name}
 			description={item.attributes.description}
-      images={item.attributes.images}
+			// Images={item.attributes.images.data}
 			price={item.attributes.price}
 			slug={item.attributes.slug}
 			stock={item.attributes.stock}

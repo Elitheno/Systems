@@ -25,5 +25,12 @@
   p {
     font-family: Helvetica;
   }
+  .btn-primary {
+    @apply font-bold text-snow border-4 border-snow p-2 
+      hover:bg-snow hover:text-background-dark transition-all;
+  }
+  .btn-primary p {
+    @apply text-snow font-bold;
+  }
 }
 

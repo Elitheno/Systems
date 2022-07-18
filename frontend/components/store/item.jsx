@@ -1,8 +1,10 @@
-import Lightbox from 'react-image-lightbox';
-import Slider from 'react-slick';
+import {useContext} from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import AppContext from '../../context/app-context.js';
 
 const StoreItem = props => {
+	const appContext = useContext(AppContext);
+
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -10,7 +12,6 @@ const StoreItem = props => {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 	};
-  console.log(props)
 
 	return (
 		<div className='py-4 store-item'>
@@ -25,15 +26,18 @@ const StoreItem = props => {
 					</p>
 					<span className='font-bold'>£{props.price.toFixed(2)}</span>
 					<br/>
-					<button className='p-1 border-4 border-background-dark bg-background-dark text-background-light
-            hover:bg-background-light hover:text-background-dark transition-all'>
-            <a href={props.url}> Buy on <b>Tindie</b> → </a>
+					{/* <Image src={props.image} width={144} height={144}/> */}
+					<button
+						className='p-1 border-4 border-background-dark bg-background-dark text-background-light
+            hover:bg-background-light hover:text-background-dark transition-all'
+						onClick={() => appContext.addItem(props)}
+					> Add to cart
 					</button>
 				</div>
 			</div>
 		</div>
 	);
-}
+};
 
 export default StoreItem;
 

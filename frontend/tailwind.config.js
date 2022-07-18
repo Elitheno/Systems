@@ -130,7 +130,13 @@ module.exports = {
 			4: '4px',
 			8: '8px',
 		},
-		extend: {},
+		extend: {
+			bgImage: {
+				texture: 'url("/img/bg2.jpg")',
+				hero: 'url("/img/polaroid.jpg")',
+			},
+
+		},
 	},
 	plugins: [],
 };
